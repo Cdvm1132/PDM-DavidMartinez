@@ -93,7 +93,7 @@ fun app() {
             onClick = {
                 if (usuario.isNotBlank()) {
                     userlist.add(usuario)
-                    usuario = "" // limpia el campo
+                    usuario = ""
                 }
             }
         ) {
