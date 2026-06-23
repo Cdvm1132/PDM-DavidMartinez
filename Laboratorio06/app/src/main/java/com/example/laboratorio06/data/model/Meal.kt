@@ -6,7 +6,6 @@ data class Meal(
     val strArea: String,
     val strMealThumb: String
 )
-
 data class MealResponse(
     val meals: List<Meal>?
 )

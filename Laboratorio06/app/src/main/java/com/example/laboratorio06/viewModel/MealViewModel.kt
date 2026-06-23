@@ -19,11 +19,11 @@ class MealViewModel : ViewModel() {
         viewModelScope.launch {
             isLoading = true
             try {
-                meals = RetrofitInstance.api.getMeals().meals ?: emptyList()
-            }catch (e: Exception) {
+                val response = RetrofitInstance.api.getMeals()
+                meals = response.meals ?: emptyList()
+            } catch (e: Exception) {
                 e.printStackTrace()
-            }
-            finally {
+            } finally {
                 isLoading = false
             }
         }
